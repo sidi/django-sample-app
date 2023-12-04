@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}<title>Department</title>{% endblock %}
+
+{% block content %}
+
+<h1 class="text-center">Liste des departements</h1>
+{% if department_list %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">code</th>
+        <th scope="col">name</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for w in department_list %}
+      <tr>
+        <th scope="row">{{ w.id }}</th>
+        <td>{{ w.code }}</td>
+        <td>{{ w.name }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% else %}
+  <p>There are no department in the database.</p>
+{% endif %}
+{% endblock %}
