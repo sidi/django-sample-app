@@ -16,4 +16,5 @@ urlpatterns = [
     path('module/<slug:pk>', views.ModuleDetail.as_view(), name='module_detail'),
     path('module/update/<slug:pk>', views.ModuleUpdate.as_view(), name='module_update'),
     path('module/delete/<slug:pk>', views.ModuleDelete.as_view(), name='module_delete'),
+    path("module/department/<department>/", views.ModuleByDeptListView.as_view()),
 ]

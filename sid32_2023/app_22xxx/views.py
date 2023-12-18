@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic import ListView, DetailView, CreateView, DeleteView, UpdateView
 from .models import *
 from django.urls import reverse_lazy
+from django.shortcuts import get_object_or_404
 
 # Create your views here.
 def home(request):
@@ -51,3 +52,10 @@ class ModuleUpdate(UpdateView):
     model =  Module
     fields = '__all__'
     success_url = reverse_lazy('module_list')
+
+class ModuleByDeptListView(ListView):
+    template_name = "app_22xxx/module_list.html"
+
+    def get_queryset(self):
+        self.department = get_object_or_404(Department, name=self.kwargs["department"])
+        return Module.objects.filter(department=self.department)
