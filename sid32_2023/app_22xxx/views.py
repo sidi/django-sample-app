@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView, CreateView, DeleteView, UpdateView
 from .models import *
+from django.urls import reverse_lazy
 
 # Create your views here.
 def home(request):
@@ -20,10 +21,13 @@ class DepartmentDetail(DetailView):
 class DepartmentCreate(CreateView):
     model = Department
     fields = '__all__'
+    success_url = reverse_lazy('department_list')
 
 class DepartmentDelete(DeleteView):
     model = Department
+    success_url = reverse_lazy('department_list')
 
 class DepartmentUpdate(UpdateView):
     model =  Department
     fields = '__all__'
+    success_url = reverse_lazy('department_list')
