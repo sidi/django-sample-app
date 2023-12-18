@@ -25,4 +25,5 @@ class DepartmentDelete(DeleteView):
     model = Department
 
 class DepartmentUpdate(UpdateView):
-    model =  Department 
+    model =  Department
+    fields = '__all__'
