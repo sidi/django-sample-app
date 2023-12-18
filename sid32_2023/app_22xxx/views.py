@@ -31,3 +31,23 @@ class DepartmentUpdate(UpdateView):
     model =  Department
     fields = '__all__'
     success_url = reverse_lazy('department_list')
+
+class ModuleList(ListView):
+    model = Module
+
+class ModuleDetail(DetailView):
+    model = Module
+
+class ModuleCreate(CreateView):
+    model = Module
+    fields = '__all__'
+    success_url = reverse_lazy('module_list')
+
+class ModuleDelete(DeleteView):
+    model = Module
+    success_url = reverse_lazy('module_list')
+
+class ModuleUpdate(UpdateView):
+    model =  Module
+    fields = '__all__'
+    success_url = reverse_lazy('module_list')
