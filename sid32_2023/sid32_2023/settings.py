@@ -84,9 +84,10 @@ WSGI_APPLICATION = 'sid32_2023.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+        "HOST": "siddb",
         'NAME': 'smsdb',
-        'USER': 'root',
-        'PASSWORD' : '',
+        'USER': 'sid',
+        'PASSWORD' : 'sid2023',
     }
 }
 
