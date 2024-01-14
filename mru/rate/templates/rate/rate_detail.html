@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}<title>Rate</title>{% endblock %}
+
+{% block content %}
+
+<h1 class="text-center"> Details of a Rate</h1>
+<ul class="list-group p-5">
+    <li class="list-group-item"><b>ID</b>: {{rate.id}}</li>
+    <li class="list-group-item"><b>Currency</b>: {{rate.currency.code}}</li>
+    <li class="list-group-item"><b>Unit</b>: {{rate.unit}}</li>
+    <li class="list-group-item"><b>Sell</b>: {{rate.sell}}</li>
+    <li class="list-group-item"><b>Buy</b>: {{rate.buy}}</li>
+    <li class="list-group-item"><b>Date</b>: {{rate.date}}</li>
+</ul>
+
+
+{% endblock %}
