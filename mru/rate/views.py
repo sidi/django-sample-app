@@ -30,9 +30,22 @@ def home(request):
         "labels": labels,
         "values": values,
         "currency": ccode,
+        "labels_2": ['MRU','USD', 'EUR'],
+        "values_2": [20,55,35],
     }
 
     return render(request, 'home.html', context)
+
+def home_pie(request):
+    
+
+    context = {
+        "labels": ['MRU','USD', 'EUR'],
+        "values": [20,55,35],
+
+    }
+
+    return render(request, 'home_pie.html', context)
 
 class CurrencyList(ListView):
     model = Currency

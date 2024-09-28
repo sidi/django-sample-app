@@ -5,6 +5,7 @@ from . import views
 
 urlpatterns = [
     path('', views.home),
+    path('pie', views.home_pie),
     path('currency/', views.CurrencyList.as_view(), name='currency_list'),
     path('currency/add', views.CurrencyCreate.as_view(), name='currency_create'),
     path('currency/<slug:pk>', views.CurrencyDetail.as_view(), name='currency_detail'),
