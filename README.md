@@ -4,7 +4,7 @@ A sample Django app
 ## How to make django db maigration
 ```
 
-python manage.pu makemigrations
-python manage.pu migrate
+python manage.py makemigrations
+python manage.py migrate
 
 ```
